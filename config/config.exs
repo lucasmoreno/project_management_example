@@ -10,17 +10,17 @@ config :project_management_example,
   ecto_repos: [ProjectManagementExample.Repo]
 
 # Configures the endpoint
-config :project_management_example, ProjectManagementExample.Endpoint,
+config :project_management_example, ProjectManagementExampleWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "5whYJ/bMQjznxG7/ZN5aRucB27+Zu0d9SQEg+7BMLkDfZSFgx+Ry6UoDTTtRbSg5",
-  render_errors: [view: ProjectManagementExample.ErrorView, accepts: ~w(html json)],
+  secret_key_base: "Loe7oSeV/t7O1ylcdu57uQESVn7dblBJlVjcQeJDYjqgYNpy65LPgGKzzGVmCyRZ",
+  render_errors: [view: ProjectManagementExampleWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: ProjectManagementExample.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+  metadata: [:user_id]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
